@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+# $which python3
+# darle permiso de ejecucion: $chmod u+x simulador.py ; y correr como $./simulador.py
 d={}
 F=set()
 programa=open('programa.txt')
