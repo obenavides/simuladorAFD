@@ -6,6 +6,7 @@ d={
 }
 
 q=0
+F={3}
 for simbolo in '111111111':
 	q=d[q][simbolo]
-	print(q)
+print(q in F)
