@@ -13,5 +13,8 @@ def AFD(d,q0,F,cinta):
 
 mensaje={True:'Aceptada',False:'Rechazada'}
 
-for cinta in ['','1','11','111','1111','11111','111111']:
+cintas=open('cintas.txt')
+for cinta in cintas:
+	cinta=cinta.strip()
 	print('La entrada',cinta," es ",mensaje[AFD(d,0,{3},cinta)])
+cintas.close()
