@@ -5,7 +5,7 @@ d={
 3:{'1':1}
 }
 
-print(d[0]['1'])
-print(d[1]['1'])
-print(d[2]['1'])
-print(d[3]['1'])
+q=0
+for simbolo in '111111111':
+	q=d[q][simbolo]
+	print(q)
