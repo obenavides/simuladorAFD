@@ -5,9 +5,11 @@ d={
 3:{'1':1}
 }
 
-q=0
-F={3}
-cinta='111111111'
-for simbolo in cinta:
-	q=d[q][simbolo]
-print(q in F)
+def AFD(d,q0,F,cinta):
+	q=q0
+	for simbolo in cinta:
+		q=d[q][simbolo]
+	return q in F
+
+for cinta in ['','1','11','111','1111','11111','111111']:
+	print('La entrada',cinta,AFD(d,0,{3},cinta))
