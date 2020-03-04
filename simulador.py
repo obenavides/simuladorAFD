@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-# $which python3
-# darle permiso de ejecucion: $chmod u+x simulador.py ; y correr como $./simulador.py
+# correr como $./simulador programa.txt cintas.txt
+from sys import argv
+
 d={}
 F=set()
-programa=open('programa.txt')
+programa=open(argv[1])
 for linea in programa:
     q,s,n=linea.split()
     if '*' in q:
@@ -20,7 +21,7 @@ def AFD(d,q0,F,cinta):
 
 mensaje={True:'Aceptada',False:'Rechazada'}
 
-cintas=open('cintas.txt')
+cintas=open(argv[2])
 for cinta in cintas:
     cinta=cinta.strip()
     print('La entrada',cinta," es ",mensaje[AFD(d,'0',F,cinta)])
