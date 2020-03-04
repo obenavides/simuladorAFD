@@ -11,5 +11,7 @@ def AFD(d,q0,F,cinta):
 		q=d[q][simbolo]
 	return q in F
 
+mensaje={True:'Aceptada',False:'Rechazada'}
+
 for cinta in ['','1','11','111','1111','11111','111111']:
-	print('La entrada',cinta,AFD(d,0,{3},cinta))
+	print('La entrada',cinta," es ",mensaje[AFD(d,0,{3},cinta)])
